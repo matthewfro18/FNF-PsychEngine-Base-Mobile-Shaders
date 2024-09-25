@@ -1849,12 +1849,13 @@ class FunkinLua {
 		Lua_helper.add_callback(lua, "clearEffects", function(camera:String) {
 			PlayState.instance.clearShaderFromCamera(camera);
 		});
+
 		Discord.DiscordClient.addLuaCallbacks(lua);
 
 		Lua_helper.add_callback(lua, "clearShadersFromCamera", function(cameraName)
 		{
 			cameraFromString(cameraName).setFilters([]);
-		});	
+		});
 					
 		Lua_helper.add_callback(lua, "addGlitchEffect", function(camera:String,waveSpeed:Float = 0.1,waveFrq:Float = 0.1,waveAmp:Float = 0.1) {
 			
